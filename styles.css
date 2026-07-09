@@ -1,0 +1,376 @@
+:root {
+  --background: #fff8f1;
+  --surface: #ffffff;
+  --surface-soft: #fff1df;
+  --primary: #ff4d8d;
+  --primary-dark: #d92869;
+  --secondary: #6d5dfc;
+  --accent: #ffc857;
+  --text: #241b2f;
+  --muted: #6f6477;
+  --border: rgba(36, 27, 47, 0.12);
+  --shadow: 0 24px 70px rgba(94, 40, 93, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
+  padding: 24px clamp(20px, 5vw, 72px) 96px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 200, 87, 0.85), transparent 26%),
+    radial-gradient(circle at 85% 16%, rgba(109, 93, 252, 0.7), transparent 28%),
+    linear-gradient(135deg, #ff4d8d 0%, #7a45ff 58%, #33216f 100%);
+}
+
+.hero::after {
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 460px;
+  height: 460px;
+  content: "";
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.navbar,
+.hero-content,
+.section,
+.info-grid,
+.footer {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  opacity: 0.86;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 120px;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5.9rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+}
+
+.hero-text {
+  max-width: 660px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.button-primary {
+  color: var(--primary-dark);
+  background: #ffffff;
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: -58px;
+  padding-inline: clamp(20px, 5vw, 0px);
+}
+
+.info-card,
+.playlist-card,
+.roles-grid article,
+.timeline-item {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.info-card {
+  padding: 24px;
+}
+
+.info-card span {
+  font-size: 2rem;
+}
+
+.info-card h2,
+.playlist-card h3,
+.roles-grid h3,
+.timeline-item h3 {
+  margin: 12px 0 6px;
+  line-height: 1.15;
+}
+
+.info-card p,
+.playlist-card ul,
+.roles-grid p,
+.timeline-item p,
+.section p,
+.check-list {
+  color: var(--muted);
+}
+
+.section {
+  padding: 92px clamp(20px, 5vw, 0px) 0;
+}
+
+.section h2 {
+  max-width: 760px;
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.check-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--surface-soft);
+  font-weight: 700;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 26px 28px 26px 148px;
+}
+
+.timeline-item time {
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  max-width: 92px;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.playlist-section {
+  padding-bottom: 0;
+}
+
+.playlist-grid,
+.roles-grid,
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.playlist-card {
+  padding: 26px;
+}
+
+.playlist-card ul {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.highlight-card {
+  color: #ffffff;
+  background: linear-gradient(150deg, var(--primary), var(--secondary));
+}
+
+.highlight-card ul {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.tips-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 32px;
+}
+
+.tips-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+
+.tips-grid p {
+  margin: 0;
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.roles-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.roles-grid article {
+  padding: 30px;
+}
+
+.footer {
+  padding: 72px clamp(20px, 5vw, 0px) 34px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 82px;
+  }
+
+  .hero-content {
+    padding-top: 84px;
+  }
+
+  .info-grid,
+  .playlist-grid,
+  .split-section,
+  .tips-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timeline-item {
+    padding-left: 28px;
+  }
+
+  .timeline-item time {
+    position: static;
+    display: block;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .info-grid,
+  .playlist-grid,
+  .split-section,
+  .tips-section,
+  .tips-grid,
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 68px;
+  }
+}
