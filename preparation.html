@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Suivi de préparation : coche les chansons que les enfants ont déjà préparées parmi les 50 titres de la playlist karaoké."
+    />
+    <title>Chansons préparées – Playlist Karaoké Enfants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero hero-compact">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a class="logo" href="index.html" aria-label="Retour à la playlist">
+          <span aria-hidden="true">🎤</span>
+          <span>Karaoké Familles</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Playlist</a>
+          <a href="#reset">Réinitialiser</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-content">
+        <p class="eyebrow">Suivi de préparation</p>
+        <h1>Quelles chansons les enfants ont-ils déjà préparées ?</h1>
+        <p class="hero-text">
+          Coche chaque titre au fur et à mesure que les enfants l'ont répété.
+          Ta progression est enregistrée automatiquement sur cet appareil.
+        </p>
+        <div class="progress-card" aria-live="polite">
+          <div class="progress-numbers">
+            <span id="progress-count">0</span>
+            <span class="progress-total">/ 50 chansons préparées</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section playlist-section" aria-labelledby="prep-title">
+        <p class="section-kicker">50 titres</p>
+        <h2 id="prep-title">Coche les chansons prêtes à être chantées</h2>
+        <div class="playlist-grid category-grid song-check-grid">
+          <article class="playlist-card">
+            <h3>🎉 Ambiance / Tout le monde chante</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Les Lacs du Connemara – Michel Sardou" /><span>Les Lacs du Connemara – Michel Sardou</span></label></li>
+              <li><label><input type="checkbox" data-song="La Tribu de Dana – Manau" /><span>La Tribu de Dana – Manau</span></label></li>
+              <li><label><input type="checkbox" data-song="Les Champs-Élysées – Joe Dassin" /><span>Les Champs-Élysées – Joe Dassin</span></label></li>
+              <li><label><input type="checkbox" data-song="Femme Libérée – Cookie Dingler" /><span>Femme Libérée – Cookie Dingler</span></label></li>
+              <li><label><input type="checkbox" data-song="Le Jerk – Thierry Hazard" /><span>Le Jerk – Thierry Hazard</span></label></li>
+              <li><label><input type="checkbox" data-song="Tomber la chemise – Zebda" /><span>Tomber la chemise – Zebda</span></label></li>
+              <li><label><input type="checkbox" data-song="Plus près des étoiles – Gold" /><span>Plus près des étoiles – Gold</span></label></li>
+              <li><label><input type="checkbox" data-song="C'est la ouate – Caroline Loeb" /><span>C'est la ouate – Caroline Loeb</span></label></li>
+              <li><label><input type="checkbox" data-song="Belle-Île-en-Mer – Laurent Voulzy" /><span>Belle-Île-en-Mer – Laurent Voulzy</span></label></li>
+              <li><label><input type="checkbox" data-song="Il est libre Max – Hervé Cristiani" /><span>Il est libre Max – Hervé Cristiani</span></label></li>
+            </ul>
+          </article>
+          <article class="playlist-card">
+            <h3>❤️ Variété française</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Pour que tu m'aimes encore – Céline Dion" /><span>Pour que tu m'aimes encore – Céline Dion</span></label></li>
+              <li><label><input type="checkbox" data-song="Je te promets – Johnny Hallyday" /><span>Je te promets – Johnny Hallyday</span></label></li>
+              <li><label><input type="checkbox" data-song="Allumer le feu – Johnny Hallyday" /><span>Allumer le feu – Johnny Hallyday</span></label></li>
+              <li><label><input type="checkbox" data-song="L'Envie – Johnny Hallyday" /><span>L'Envie – Johnny Hallyday</span></label></li>
+              <li><label><input type="checkbox" data-song="Quand la musique est bonne – Jean-Jacques Goldman" /><span>Quand la musique est bonne – Jean-Jacques Goldman</span></label></li>
+              <li><label><input type="checkbox" data-song="Je marche seul – Jean-Jacques Goldman" /><span>Je marche seul – Jean-Jacques Goldman</span></label></li>
+              <li><label><input type="checkbox" data-song="Envole-moi – Jean-Jacques Goldman" /><span>Envole-moi – Jean-Jacques Goldman</span></label></li>
+              <li><label><input type="checkbox" data-song="Encore un matin – Jean-Jacques Goldman" /><span>Encore un matin – Jean-Jacques Goldman</span></label></li>
+              <li><label><input type="checkbox" data-song="Je t'aimais, je t'aime, je t'aimerai – Francis Cabrel" /><span>Je t'aimais, je t'aime, je t'aimerai – Francis Cabrel</span></label></li>
+              <li><label><input type="checkbox" data-song="Petite Marie – Francis Cabrel" /><span>Petite Marie – Francis Cabrel</span></label></li>
+            </ul>
+          </article>
+          <article class="playlist-card">
+            <h3>👩‍🎤 Chansons très connues</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Il jouait du piano debout – France Gall" /><span>Il jouait du piano debout – France Gall</span></label></li>
+              <li><label><input type="checkbox" data-song="Ella, elle l'a – France Gall" /><span>Ella, elle l'a – France Gall</span></label></li>
+              <li><label><input type="checkbox" data-song="Résiste – France Gall" /><span>Résiste – France Gall</span></label></li>
+              <li><label><input type="checkbox" data-song="Diego libre dans sa tête – Michel Berger" /><span>Diego libre dans sa tête – Michel Berger</span></label></li>
+              <li><label><input type="checkbox" data-song="Le Paradis blanc – Michel Berger" /><span>Le Paradis blanc – Michel Berger</span></label></li>
+              <li><label><input type="checkbox" data-song="Mistral Gagnant – Renaud" /><span>Mistral Gagnant – Renaud</span></label></li>
+              <li><label><input type="checkbox" data-song="Dès que le vent soufflera – Renaud" /><span>Dès que le vent soufflera – Renaud</span></label></li>
+              <li><label><input type="checkbox" data-song="Je l'aime à mourir – Francis Cabrel" /><span>Je l'aime à mourir – Francis Cabrel</span></label></li>
+              <li><label><input type="checkbox" data-song="Les Mots bleus – Christophe" /><span>Les Mots bleus – Christophe</span></label></li>
+              <li><label><input type="checkbox" data-song="L'Aventurier – Indochine" /><span>L'Aventurier – Indochine</span></label></li>
+            </ul>
+          </article>
+          <article class="playlist-card">
+            <h3>👨‍👩‍👧‍👦 Duos</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Sous le vent – Garou &amp; Céline Dion" /><span>Sous le vent – Garou &amp; Céline Dion</span></label></li>
+              <li><label><input type="checkbox" data-song="J'irai où tu iras – Céline Dion &amp; Jean-Jacques Goldman" /><span>J'irai où tu iras – Céline Dion &amp; Jean-Jacques Goldman</span></label></li>
+              <li><label><input type="checkbox" data-song="Belle – Notre-Dame de Paris" /><span>Belle – Notre-Dame de Paris</span></label></li>
+              <li><label><input type="checkbox" data-song="Le Temps des cathédrales – Notre-Dame de Paris" /><span>Le Temps des cathédrales – Notre-Dame de Paris</span></label></li>
+              <li><label><input type="checkbox" data-song="Aimer – Roméo &amp; Juliette" /><span>Aimer – Roméo &amp; Juliette</span></label></li>
+            </ul>
+          </article>
+          <article class="playlist-card">
+            <h3>🕺 Années 80-90</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Nuit de folie – Début de Soirée" /><span>Nuit de folie – Début de Soirée</span></label></li>
+              <li><label><input type="checkbox" data-song="Partenaire Particulier – Partenaire Particulier" /><span>Partenaire Particulier – Partenaire Particulier</span></label></li>
+              <li><label><input type="checkbox" data-song="Macumba – Jean-Pierre Mader" /><span>Macumba – Jean-Pierre Mader</span></label></li>
+              <li><label><input type="checkbox" data-song="Voyage Voyage – Desireless" /><span>Voyage Voyage – Desireless</span></label></li>
+              <li><label><input type="checkbox" data-song="À cause des garçons – À cause des garçons" /><span>À cause des garçons – À cause des garçons</span></label></li>
+              <li><label><input type="checkbox" data-song="Alexandrie Alexandra – Claude François" /><span>Alexandrie Alexandra – Claude François</span></label></li>
+              <li><label><input type="checkbox" data-song="Le Lundi au soleil – Claude François" /><span>Le Lundi au soleil – Claude François</span></label></li>
+              <li><label><input type="checkbox" data-song="Pour le plaisir – Herbert Léonard" /><span>Pour le plaisir – Herbert Léonard</span></label></li>
+              <li><label><input type="checkbox" data-song="Éveille-toi – Images" /><span>Éveille-toi – Images</span></label></li>
+              <li><label><input type="checkbox" data-song="Les Démons de minuit – Images" /><span>Les Démons de minuit – Images</span></label></li>
+            </ul>
+          </article>
+          <article class="playlist-card highlight-card">
+            <h3>🎈 Pour les enfants</h3>
+            <ul class="song-checklist">
+              <li><label><input type="checkbox" data-song="Libérée, délivrée" /><span>Libérée, délivrée</span></label></li>
+              <li><label><input type="checkbox" data-song="L'Oiseau et l'Enfant – Marie Myriam" /><span>L'Oiseau et l'Enfant – Marie Myriam</span></label></li>
+              <li><label><input type="checkbox" data-song="Santiano – Hugues Aufray" /><span>Santiano – Hugues Aufray</span></label></li>
+              <li><label><input type="checkbox" data-song="Aux Champs-Élysées – Joe Dassin" /><span>Aux Champs-Élysées – Joe Dassin</span></label></li>
+              <li><label><input type="checkbox" data-song="Les Sardines – Patrick Sébastien" /><span>Les Sardines – Patrick Sébastien</span></label></li>
+              <li><label><input type="checkbox" data-song="Ah les crocodiles" /><span>Ah les crocodiles</span></label></li>
+              <li><label><input type="checkbox" data-song="Une souris verte" /><span>Une souris verte</span></label></li>
+              <li><label><input type="checkbox" data-song="Pirouette Cacahuète" /><span>Pirouette Cacahuète</span></label></li>
+              <li><label><input type="checkbox" data-song="Le Lion est mort ce soir" /><span>Le Lion est mort ce soir</span></label></li>
+              <li><label><input type="checkbox" data-song="Hakuna Matata" /><span>Hakuna Matata</span></label></li>
+            </ul>
+          </article>
+        </div>
+        <p id="reset" class="reset-row">
+          <button type="button" class="button button-secondary" id="reset-button">
+            Réinitialiser toutes les cases
+          </button>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>GameClub · Karaoké Familles · Ensemble, on chante plus fort.</p>
+    </footer>
+
+    <script>
+      (function () {
+        var STORAGE_KEY = "karaoke-prepared-songs";
+        var checkboxes = Array.prototype.slice.call(
+          document.querySelectorAll(".song-checklist input[type='checkbox']")
+        );
+        var countEl = document.getElementById("progress-count");
+        var barEl = document.getElementById("progress-bar-fill");
+        var resetButton = document.getElementById("reset-button");
+
+        function loadState() {
+          try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+          } catch (e) {
+            return {};
+          }
+        }
+
+        function saveState(state) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function updateProgress() {
+          var checkedCount = checkboxes.filter(function (box) {
+            return box.checked;
+          }).length;
+          countEl.textContent = checkedCount;
+          barEl.style.width = (checkedCount / checkboxes.length) * 100 + "%";
+        }
+
+        function applyState(state) {
+          checkboxes.forEach(function (box) {
+            var song = box.dataset.song;
+            box.checked = Boolean(state[song]);
+            box.closest("li").classList.toggle("is-checked", box.checked);
+          });
+          updateProgress();
+        }
+
+        checkboxes.forEach(function (box) {
+          box.addEventListener("change", function () {
+            var state = loadState();
+            state[box.dataset.song] = box.checked;
+            saveState(state);
+            box.closest("li").classList.toggle("is-checked", box.checked);
+            updateProgress();
+          });
+        });
+
+        resetButton.addEventListener("click", function () {
+          saveState({});
+          applyState({});
+        });
+
+        applyState(loadState());
+      })();
+    </script>
+  </body>
+</html>
