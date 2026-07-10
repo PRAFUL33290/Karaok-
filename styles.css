@@ -233,6 +233,33 @@ a {
   font-weight: 700;
 }
 
+.order-list {
+  counter-reset: order-step;
+  max-width: 560px;
+  margin-top: 34px;
+}
+
+.order-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.order-list li::before {
+  counter-increment: order-step;
+  content: counter(order-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--primary);
+  font-size: 0.9rem;
+}
+
 .timeline {
   display: grid;
   gap: 18px;
