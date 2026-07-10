@@ -306,6 +306,44 @@ a {
   font-weight: 700;
 }
 
+.category-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.numbered-list {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.numbered-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  background: var(--surface-soft);
+  font-weight: 700;
+  counter-increment: step;
+}
+
+.numbered-list li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--primary);
+  font-size: 0.85rem;
+  content: counter(step);
+}
+
 .roles-grid {
   grid-template-columns: repeat(2, 1fr);
 }
